@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Myactivities</title>
+  <script type="text/javascript">
+    var parsedUrl = new URL(window.location.href);
+    const url = parsedUrl.searchParams.get("state");
+    const code = parsedUrl.searchParams.get("code");
+    const redirect_url = url + '?code='+code;
+    if (url !== null && code !== null) {
+      setTimeout(() => {
+        window.location.replace(redirect_url);
+      }, 1000)
+    }
+  </script>
+</head>
+<body>
+  <h1>Coming Soon</h1>
+</body>
+</html>
